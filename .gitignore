@@ -1,0 +1,8 @@
+
+\.idea/\.idea\.LyricsClassifier/\.idea/
+\.idea/\.idea\.LyricsClassifier/
+bin
+obj
+./Data/
+
+Data/lyrics\.csv
