@@ -4,6 +4,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public static class Question1_1
     {
+        // O(n) complexity 
         public static bool IsUnique(string str)
         {
             var charSet = new Dictionary<char, bool>();
