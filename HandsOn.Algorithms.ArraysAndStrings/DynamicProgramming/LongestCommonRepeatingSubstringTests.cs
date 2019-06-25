@@ -9,7 +9,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
         [Fact]
         public static void should_calculate_the_right_longest_common_repeating_substring()
         {
-            string s1 = "banana"; 
+            string s1 = "banana";
             LongestCommonRepeatingSubstring.longestRepeatedSubstring(s1).ShouldBe("ana");
         }
     }

@@ -19,7 +19,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
                     else if (input1[i - 1] == input2[j - 1])
                         L[i, j] = L[i - 1, j - 1] + 1;
                     else
-                        L[i, j] = L[i - 1, j] > L[i, j - 1] ? L[i - 1, j]:  L[i, j - 1] ;
+                        L[i, j] = L[i - 1, j] > L[i, j - 1] ? L[i - 1, j] : L[i, j - 1];
                 }
             }
 
