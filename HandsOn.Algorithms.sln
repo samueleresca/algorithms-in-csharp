@@ -2,7 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOn.Algorithms.ArraysAndStrings", "HandsOn.Algorithms.ArraysAndStrings\HandsOn.Algorithms.ArraysAndStrings.csproj", "{0D5C93A6-50E9-46E4-B017-34B44649FA01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOn.DataStructures", "HandsOn.DataStructures\HandsOn.DataStructures.csproj", "{41AB07B5-2389-48D8-BD44-F7C30E2200CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOn.Algorithms.LinkedLists", "HandsOn.Algorithms.LinkedLists\HandsOn.Algorithms.LinkedLists.csproj", "{C3884D23-1404-40D4-9C95-D02299CC454D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOn.Algorithms.Top10", "HandsOn.Algorithms.Top10\HandsOn.Algorithms.Top10.csproj", "{7D6C504C-8DEA-4716-9A69-CC3CC89AE1E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +16,13 @@ Global
 		{0D5C93A6-50E9-46E4-B017-34B44649FA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D5C93A6-50E9-46E4-B017-34B44649FA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D5C93A6-50E9-46E4-B017-34B44649FA01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{41AB07B5-2389-48D8-BD44-F7C30E2200CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41AB07B5-2389-48D8-BD44-F7C30E2200CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41AB07B5-2389-48D8-BD44-F7C30E2200CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41AB07B5-2389-48D8-BD44-F7C30E2200CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3884D23-1404-40D4-9C95-D02299CC454D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3884D23-1404-40D4-9C95-D02299CC454D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3884D23-1404-40D4-9C95-D02299CC454D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3884D23-1404-40D4-9C95-D02299CC454D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6C504C-8DEA-4716-9A69-CC3CC89AE1E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6C504C-8DEA-4716-9A69-CC3CC89AE1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6C504C-8DEA-4716-9A69-CC3CC89AE1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6C504C-8DEA-4716-9A69-CC3CC89AE1E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
