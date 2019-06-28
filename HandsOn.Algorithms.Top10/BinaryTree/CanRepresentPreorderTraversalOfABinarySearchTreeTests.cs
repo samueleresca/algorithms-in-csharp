@@ -1,7 +1,7 @@
 using Shouldly;
 using Xunit;
 
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public class CanRepresentPreorderTraversalOfABinarySearchTreeTests
     {

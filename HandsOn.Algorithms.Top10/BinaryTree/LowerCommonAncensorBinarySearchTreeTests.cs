@@ -1,9 +1,9 @@
 using Shouldly;
 using Xunit;
-using Node = HandsOn.DataStructures.BinaryTree.LowerCommonAncestorBinarySearchTree.Node;
+using Node = HandsOn.Algorithms.Top10.BinaryTree.LowerCommonAncestorBinarySearchTree.Node;
 
 
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public class LowerCommonAncestorBinarySearchTreeTests
     {

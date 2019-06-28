@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public class BreadthFirstTraversal
     {
@@ -24,6 +23,33 @@ namespace HandsOn.DataStructures.BinaryTree
         public int[] findBFT()
         {
             return findBFT(root);
+        }
+
+        public IList<IList<string>> GroupAnagrams(string[] strs)
+        {
+            var indexGrouped = new Dictionary<int, List<string>>();
+            IList<IList<string>> result = new List<IList<string>>();
+            foreach (var str in strs)
+            {
+                var charCount = str.ToCharArray().Sum(x => (int)x);
+                if (indexGrouped.ContainsKey(charCount))
+                {
+                    indexGrouped[charCount].Add(str);
+                    continue;
+
+                }
+
+                var newList = new List<string> { str };
+                indexGrouped.Add(charCount, newList);
+            }
+
+
+            foreach (var key in indexGrouped)
+            {
+                result.Add(indexGrouped[key.Key]);
+            }
+
+            return result;
         }
 
         public virtual int[] findBFT(Node root)

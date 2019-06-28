@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public class CanRepresentPreorderTraversalOfABinarySearchTree
     {

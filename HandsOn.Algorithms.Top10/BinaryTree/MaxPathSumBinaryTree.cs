@@ -1,6 +1,6 @@
 using System;
 
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public static class MaxPathSumBinaryTree
     {

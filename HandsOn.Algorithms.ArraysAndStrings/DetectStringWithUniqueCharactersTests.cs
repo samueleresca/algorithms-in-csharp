@@ -1,8 +1,7 @@
-using System.Collections.Generic;
 using Shouldly;
 using Xunit;
 
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public static class DetectStringWithUniqueCharactersTests
     {

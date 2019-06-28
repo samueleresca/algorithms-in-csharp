@@ -1,11 +1,8 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using Shouldly;
 using Xunit;
-using Node = HandsOn.DataStructures.BinaryTree.BreadthFirstTraversal.Node;
+using Node = HandsOn.Algorithms.Top10.BinaryTree.BreadthFirstTraversal.Node;
 
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public class BreadthFirstTraversalTests
     {

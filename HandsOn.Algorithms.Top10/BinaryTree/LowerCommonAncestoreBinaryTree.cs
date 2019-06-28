@@ -1,7 +1,4 @@
-using System.Data;
-using Xunit.Sdk;
-
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public class LowerCommonAncestorBinaryTree
     {

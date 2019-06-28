@@ -1,6 +1,4 @@
-using System;
-
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public static class DetectTwoStringsArePermutations
     {

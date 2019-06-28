@@ -1,10 +1,8 @@
-using System.Data;
 using Shouldly;
 using Xunit;
-using Xunit.Sdk;
-using Node = HandsOn.DataStructures.BinaryTree.LowerCommonAncestorBinaryTree.Node;
+using Node = HandsOn.Algorithms.Top10.BinaryTree.LowerCommonAncestorBinaryTree.Node;
 
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public class LowerCommonAncestorBinaryTreeTests
     {

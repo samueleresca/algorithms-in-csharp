@@ -1,8 +1,8 @@
 using Shouldly;
 using Xunit;
-using Node = HandsOn.DataStructures.BinaryTree.FindMinDepthBinaryTree.Node;
+using Node = HandsOn.Algorithms.Top10.BinaryTree.FindMinDepthBinaryTree.Node;
 
-namespace HandsOn.DataStructures.BinaryTree
+namespace HandsOn.Algorithms.Top10.BinaryTree
 {
     public class FindMinDepthBinaryTreeTests
     {

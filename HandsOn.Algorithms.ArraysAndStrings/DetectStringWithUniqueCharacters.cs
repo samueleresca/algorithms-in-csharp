@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public static class DetectStringWithUniqueCharacters
     {

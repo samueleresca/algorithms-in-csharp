@@ -1,6 +1,6 @@
 using System;
 
-namespace HandsOn.DataStructures
+namespace HandsOn.Algorithms.Top10
 {
     public class MyStack<T>
     {
