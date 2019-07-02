@@ -1,10 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Net.WebSockets;
 using Shouldly;
 using Xunit;
 
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public class JumpGameIITests
     {

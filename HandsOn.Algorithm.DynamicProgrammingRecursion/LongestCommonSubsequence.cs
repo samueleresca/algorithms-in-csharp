@@ -1,6 +1,4 @@
-using System;
-
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public static class LongestCommonSubsequence
     {

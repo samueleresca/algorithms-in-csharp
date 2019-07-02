@@ -2,7 +2,7 @@ using System;
 using Shouldly;
 using Xunit;
 
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public static class LongestCommonSubsequenceTests
     {

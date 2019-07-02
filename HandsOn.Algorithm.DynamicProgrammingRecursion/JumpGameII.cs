@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Net.WebSockets;
 
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public static class JumpGameII
     {

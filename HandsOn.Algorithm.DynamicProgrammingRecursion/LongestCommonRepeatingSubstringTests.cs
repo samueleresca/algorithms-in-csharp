@@ -1,8 +1,7 @@
-using System;
 using Shouldly;
 using Xunit;
 
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public class LongestCommonRepeatingSubstringTests
     {

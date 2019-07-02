@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace HandsOn.Algorithms.ArraysAndStrings.DynamicProgramming
+namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public static class LongestCommonRepeatingSubstring
     {
