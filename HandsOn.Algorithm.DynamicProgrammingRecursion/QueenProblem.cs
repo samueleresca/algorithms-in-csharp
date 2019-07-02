@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
-    public  class QueenProblem
+    public class QueenProblem
     {
         public IList<IList<string>> SolveNQueens(int n)
         {
@@ -15,16 +15,16 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
             {
                 cols[i] = initString;
             }
-           
-            
+
+
             return placeQueens(n, 0, new List<string>(cols), new List<IList<string>>());
         }
-        public  IList<IList<string>> placeQueens(int size, int row, List<string> matrix, IList<IList<string>> result)
+        public IList<IList<string>> placeQueens(int size, int row, List<string> matrix, IList<IList<string>> result)
         {
             if (row == size)
             {
-                
-                result.Add(matrix.Select(_=>_.ToString()).ToList());
+
+                result.Add(matrix.Select(_ => _.ToString()).ToList());
                 return result;
             }
 
@@ -34,7 +34,7 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
                 {
                     continue;
                 }
-                
+
                 matrix[row] = matrix[row].Remove(col, 1).Insert(col, "Q");
                 placeQueens(size, row + 1, matrix, result);
 
@@ -43,7 +43,7 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
             return result;
         }
 
-        private  bool checkValid(List<string> matrix,  int currentRow, int currentColumn)
+        private bool checkValid(List<string> matrix, int currentRow, int currentColumn)
         {
             var previousRow = currentRow - 1;
             var previousColumn = currentColumn - 1;
@@ -55,19 +55,19 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 
             string upCell = matrix[previousRow].Substring(currentColumn, 1);
 
-                if (upCell == "Q")
-                {
-                    return false;
-                }
+            if (upCell == "Q")
+            {
+                return false;
+            }
 
-                
-                if (previousColumn <= 0)
-                {
-                    return true;
-                }
-                string diagonalCell = matrix[previousRow].Substring(previousColumn-1, 1);
 
-                return diagonalCell != "Q";
+            if (previousColumn <= 0)
+            {
+                return true;
+            }
+            string diagonalCell = matrix[previousRow].Substring(previousColumn - 1, 1);
+
+            return diagonalCell != "Q";
         }
     }
 }

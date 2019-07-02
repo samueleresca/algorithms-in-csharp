@@ -9,9 +9,9 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
         [Fact]
         public void should_return_right_result()
         {
-           var result = new QueenProblem().SolveNQueens(4);
-          result.Count.ShouldBe(2);
-            
+            var result = new QueenProblem().SolveNQueens(4);
+            result.Count.ShouldBe(2);
+
         }
 
     }
