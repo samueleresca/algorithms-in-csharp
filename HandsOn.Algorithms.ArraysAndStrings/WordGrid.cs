@@ -43,16 +43,15 @@ namespace HandsOn.Algorithms.ArraysAndStrings
                 {
                     if (rd >= grid.GetLength(0) || rd < 0 || cd >= grid[0].Length || cd < 0)
                         break;
-
                     if (grid[rd][cd] != word[k])
                         break;
 
                     rd += x[dir];
                     cd += y[dir];
                 }
-
                 if (k == word.Length - 1)
                     return true;
+
             }
             return false;
         }
