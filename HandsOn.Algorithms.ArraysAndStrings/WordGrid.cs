@@ -1,10 +1,12 @@
 using System;
+using System.Runtime.CompilerServices;
+using Xunit.Abstractions;
 
 namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public class WordGrid
     {
-        public bool Exist(char[][] board, string word)
+        public bool Exist(char[][] board, string word, ITestOutputHelper testOutputHelper)
         {
 
             var rowLength = board.GetLength(0);
@@ -15,7 +17,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
 
                 for (int columnIndex = 0; columnIndex < columnLength; columnIndex++)
                 {
-                    if (search2D(board, rowIndex, columnIndex, word))
+                    if (search2D(board, rowIndex, columnIndex, word, testOutputHelper))
                     {
                         return true;
                     }
@@ -26,34 +28,35 @@ namespace HandsOn.Algorithms.ArraysAndStrings
         }
 
         private bool search2D(char[][] grid, int row,
-            int col, string word)
+            int col, string word, ITestOutputHelper testOutputHelper)
         {
 
-            var x = new int[] { -1, 0, 1, 0 };
-            var y = new int[] { 0, -1, 0, 1 };
+            var y = new int[] { 1, 0, -1, 0 };
+            var x = new int[] { 0, 1, 0, 1 };
 
             if (grid[row][col] != word[0])
                 return false;
 
-            for (int dir = 0; dir < 4; dir++)
+            int k = 1, rd = 0, cd = 0;
+            rd = row;
+            cd = col;
+
+            for (int currentDir = 0; currentDir < 4; currentDir++)
             {
-                int k, rd = row + x[dir], cd = col + y[dir];
+                if (rd >= grid.GetLength(0) || rd < 0 || cd >= grid[0].Length || cd < 0)
+                    continue;
+                if (grid[rd][cd] != word[k])
+                    continue;
 
-                for (k = 1; k < word.Length; k++)
-                {
-                    if (rd >= grid.GetLength(0) || rd < 0 || cd >= grid[0].Length || cd < 0)
-                        break;
-                    if (grid[rd][cd] != word[k])
-                        break;
+                testOutputHelper.WriteLine(grid[rd][cd].ToString());
 
-                    rd += x[dir];
-                    cd += y[dir];
-                }
-                if (k == word.Length - 1)
-                    return true;
+                rd += x[currentDir];
+                cd += y[currentDir];
 
+                currentDir = 0;
+                k++;
             }
-            return false;
+            return k == word.Length - 1;
         }
     }
 }
