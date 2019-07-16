@@ -7,13 +7,6 @@ namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public class WordGridTest
     {
-        private readonly ITestOutputHelper _testOutputHelper;
-
-        public WordGridTest(ITestOutputHelper testOutputHelper)
-        {
-            _testOutputHelper = testOutputHelper;
-        }
-
         [Theory]
         [InlineData("ABCCED", true)]
         [InlineData("SEE", true)]
@@ -23,11 +16,11 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             var board = new char[3][];
 
 
-            board[0] = new char[] { 'A', 'B', 'C', 'E' };
-            board[1] = new char[] { 'S', 'F', 'C', 'S' };
-            board[2] = new char[] { 'A', 'D', 'E', 'E' };
+            board[0] = new[] { 'A', 'B', 'C', 'E' };
+            board[1] = new[] { 'S', 'F', 'C', 'S' };
+            board[2] = new[] { 'A', 'D', 'E', 'E' };
 
-            new WordGrid().Exist(board, word, _testOutputHelper).ShouldBe(result);
+            new WordGrid().Exist(board, word).ShouldBe(result);
         }
     }
 }

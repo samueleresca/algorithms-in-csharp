@@ -7,7 +7,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public class WordGrid
     {
-        public bool Exist(char[][] board, string word, ITestOutputHelper testOutputHelper)
+        public bool Exist(char[][] board, string word)
         {
 
             var rowLength = board.GetLength(0);
