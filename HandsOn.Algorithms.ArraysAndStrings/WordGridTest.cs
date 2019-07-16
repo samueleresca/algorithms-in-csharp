@@ -14,8 +14,11 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             _testOutputHelper = testOutputHelper;
         }
 
-        [Fact]
-        public void should_return_right_word()
+        [Theory]
+        [InlineData("ABCCED", true)]
+        [InlineData("SEE", true)]
+        [InlineData("ABCB", false)]
+        public void should_return_right_word(string word, bool result)
         {
             var board = new char[3][];
 
@@ -24,8 +27,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             board[1] = new char[] { 'S', 'F', 'C', 'S' };
             board[2] = new char[] { 'A', 'D', 'E', 'E' };
 
-            new WordGrid().Exist(board, "ABCCED", _testOutputHelper).ShouldBe(true);
+            new WordGrid().Exist(board, word, _testOutputHelper).ShouldBe(result);
         }
-
     }
 }

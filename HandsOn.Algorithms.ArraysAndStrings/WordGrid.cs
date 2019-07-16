@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.CompilerServices;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
 using Xunit.Abstractions;
 
 namespace HandsOn.Algorithms.ArraysAndStrings
@@ -14,10 +15,9 @@ namespace HandsOn.Algorithms.ArraysAndStrings
 
             for (int rowIndex = 0; rowIndex < rowLength; rowIndex++)
             {
-
                 for (int columnIndex = 0; columnIndex < columnLength; columnIndex++)
                 {
-                    if (search2D(board, rowIndex, columnIndex, word, testOutputHelper))
+                    if (board[rowIndex][columnIndex] == word[0] && dfs(board, rowIndex, columnIndex, 0, word))
                     {
                         return true;
                     }
@@ -27,36 +27,42 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             return false;
         }
 
-        private bool search2D(char[][] grid, int row,
-            int col, string word, ITestOutputHelper testOutputHelper)
+
+        private bool dfs(char[][] board, int rowIndex, int columnIndex, int count, string word)
         {
 
-            var y = new int[] { 1, 0, -1, 0 };
-            var x = new int[] { 0, 1, 0, 1 };
-
-            if (grid[row][col] != word[0])
-                return false;
-
-            int k = 1, rd = 0, cd = 0;
-            rd = row;
-            cd = col;
-
-            for (int currentDir = 0; currentDir < 4; currentDir++)
+            //CHECK IT REACHED THE END OF THE WORD
+            if (count == word.Length)
             {
-                if (rd >= grid.GetLength(0) || rd < 0 || cd >= grid[0].Length || cd < 0)
-                    continue;
-                if (grid[rd][cd] != word[k])
-                    continue;
-
-                testOutputHelper.WriteLine(grid[rd][cd].ToString());
-
-                rd += x[currentDir];
-                cd += y[currentDir];
-
-                currentDir = 0;
-                k++;
+                return true;
             }
-            return k == word.Length - 1;
+
+            //CECK OUT OF BUNDARIES
+            if (rowIndex < 0 || rowIndex >= board.Length ||
+                columnIndex < 0 || columnIndex >= board[rowIndex].Length)
+            {
+                return false;
+            }
+
+            //CHECK IF THE CHAR IS DIFFERENT FROM THE CURRENT ONE
+            if (board[rowIndex][columnIndex] != word[count])
+            {
+                return false;
+            }
+
+
+            var temp = board[rowIndex][columnIndex];
+            board[rowIndex][columnIndex] = ' ';
+
+            var found = dfs(board, rowIndex + 1, columnIndex, count + 1, word)
+                            || dfs(board, rowIndex - 1, columnIndex, count + 1, word)
+                            || dfs(board, rowIndex, columnIndex + 1, count + 1, word)
+                            || dfs(board, rowIndex, columnIndex - 1, count + 1, word);
+
+            board[rowIndex][columnIndex] = temp;
+
+
+            return found;
         }
     }
 }
