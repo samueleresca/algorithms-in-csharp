@@ -17,7 +17,8 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             {
                 for (int columnIndex = 0; columnIndex < columnLength; columnIndex++)
                 {
-                    if (board[rowIndex][columnIndex] == word[0] && dfs(board, rowIndex, columnIndex, 0, word))
+                    if (board[rowIndex][columnIndex] == word[0] 
+                        && dfs(board, rowIndex, columnIndex, 0, word))
                     {
                         return true;
                     }
