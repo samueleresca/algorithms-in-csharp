@@ -1,4 +1,4 @@
-# Hands-on algorithms
+# Algorithms
 
 [![Build Status](https://dev.azure.com/samueleresca0753/HandsOn.Algorithm/_apis/build/status/samueleresca.HandsOn.Algorithms?branchName=master)](https://dev.azure.com/samueleresca0753/HandsOn.Algorithm/_build/latest?definitionId=2&branchName=master)
 
