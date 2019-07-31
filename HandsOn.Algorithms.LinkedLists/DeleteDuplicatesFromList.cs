@@ -9,7 +9,6 @@ namespace HandsOn.Algorithms.LinkedLists
         public static List<int> DeleteDuplicates(List<int> nodeList)
         {
             HashSet<int> set = new HashSet<int>();
-            LinkedListNode<int> previous = null;
 
             for (var index = 0; index < nodeList.Count; index++)
             {

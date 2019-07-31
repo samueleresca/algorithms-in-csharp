@@ -13,8 +13,7 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 
             var finalResult = stringNums.Aggregate((i, j) => i + j);
 
-            if (finalResult.All(x => x == '0')) return "0";
-            return finalResult;
+            return finalResult.All(x => x == '0') ? "0" : finalResult;
         }
 
 

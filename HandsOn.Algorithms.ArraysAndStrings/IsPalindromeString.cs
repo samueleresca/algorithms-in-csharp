@@ -12,7 +12,6 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             {
                 if (input[l++] != input[h--])
                 {
-
                     return false;
                 }
             }

@@ -53,8 +53,10 @@ namespace HandsOn.Algorithm.TreesGraphs
             {
                 return;
             }
+            
             PostOrderHandler(root.left, myList);
             PostOrderHandler(root.right, myList);
+            
             myList.Add(root.val);
         }
 
