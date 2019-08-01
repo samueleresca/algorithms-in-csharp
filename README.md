@@ -14,5 +14,7 @@ Every algorithm has the following table associated:
 ## Dynamic programming / recursion 
 
 The `HandsOn.Algorithm.DynamicProgrammingRecursion` project contains some of the common problems related to dynamic 
-programming and recursion.
+programming and recursion: [Dynamic Recursion / Recursive](./HandsOn.Algorithm.DynamicProgrammingRecursion/DynamicRecursionReadme.md)
+
+
 

@@ -5,18 +5,12 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public class FindMaxNumberOfSquaresTests
     {
-
-        [Fact]
-        public void checkResult()
+        [Theory]
+        [InlineData(10, 20, 2)]
+        [InlineData(6000, 7000, 3)]
+        public void checkResult(int numA, int numB, int result)
         {
-            FindMaxNumberOfSquares.NumSquares(10, 20).ShouldBe(2);
+            FindMaxNumberOfSquares.NumSquares(numA, numB).ShouldBe(result);
         }
-
-        [Fact]
-        public void checkResult_1()
-        {
-            FindMaxNumberOfSquares.NumSquares(6000, 7000).ShouldBe(3);
-        }
-
     }
 }
