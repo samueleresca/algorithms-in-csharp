@@ -18,13 +18,32 @@ The . character does not represent a decimal point and is used to separate numbe
     2. if v1[i] < v2[i] return -1;
     3. if you reach the end return 0
     
-## Time complexity 
+### Time complexity 
 
 The time complexity is `O(n)`
 _________________
 
 ## Find max number of squares
 
+
+
+_________________
+
+## Jump Game II
+
+Given an array of non-negative integers, you are  positioned at the first index of the array.
+Each element in the array represents your maximum jump length at that position.
+Your goal is to reach the last index in the minimum number of jumps.
+
+```
+Input: [2,3,1,1,4]
+Output: 2
+
+```
+
+### Steps
+
+1. 
 
 
 

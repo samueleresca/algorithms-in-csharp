@@ -21,10 +21,6 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 
     class CustomStringComparer : IComparer<string>
     {
-        public CustomStringComparer()
-        {
-        }
-
         public int Compare(string string1, string string2)
         {
             String order1 = string1 + string2;

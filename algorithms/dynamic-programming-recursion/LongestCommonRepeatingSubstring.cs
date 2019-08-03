@@ -23,13 +23,10 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
                     {
                         lastWord = str.Substring(i, j);
                     }
-
                 }
 
                 j++;
             }
-
-
             return lastWord;
         }
     }

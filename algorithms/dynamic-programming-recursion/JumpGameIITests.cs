@@ -15,10 +15,9 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
         [Fact]
         public static void should_calculate_the_right_empty()
         {
-            int[] steps = new int[] { 0 };
+            int[] steps = { 0 };
             JumpGameII.calculateSteps(steps).ShouldBe(0);
         }
-
 
         [Fact]
         public static void should_calculate_the_right_steps_2()
@@ -33,9 +32,5 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
             int[] steps = { 1, 2 };
             JumpGameII.calculateSteps(steps).ShouldBe(1);
         }
-
-
-
-
     }
 }
