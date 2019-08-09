@@ -3,7 +3,7 @@ using Xunit;
 
 namespace HandsOn.Algorithms.ArraysAndStrings
 {
-    public static class DetectStringWithUniqueCharactersTests
+    public static class StringIsUniqueTests
     {
         [Theory]
         [InlineData("aa", false)]
@@ -12,7 +12,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
         [InlineData("qwertyuiopasdfghjklzxcvbnm", true)]
         public static void should_detect_unique_strings(string s, bool result)
         {
-            DetectStringWithUniqueCharacters.IsUnique(s).ShouldBe(result);
+            StringIsUnique.Check(s).ShouldBe(result);
         }
     }
 }

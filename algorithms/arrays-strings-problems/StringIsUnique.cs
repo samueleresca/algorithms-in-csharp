@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace HandsOn.Algorithms.ArraysAndStrings
 {
-    public static class DetectStringWithUniqueCharacters
+    public static class StringIsUnique
     {
-        public static bool IsUnique(string s)
+        public static bool Check(string s)
         {
             if (s.Length > 128) return false;
             var charDictionary = new Dictionary<char, bool>();
