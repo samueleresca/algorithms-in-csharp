@@ -1,4 +1,3 @@
-using System;
 using Shouldly;
 using Xunit;
 
@@ -6,14 +5,12 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public static class LongestCommonSubsequenceTests
     {
-
         [Fact]
         public static void should_calculate_the_right_longest_common_subsequence()
         {
-            String s1 = "AGGTAB";
-            String s2 = "GXTXAYB";
+            var s1 = "AGGTAB";
+            var s2 = "GXTXAYB";
             LongestCommonSubsequence.Execute(s1, s2).ShouldBe(4);
-
         }
     }
 }

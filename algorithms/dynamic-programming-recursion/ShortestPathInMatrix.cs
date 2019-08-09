@@ -6,8 +6,8 @@ namespace HandsOn.Algorithms.ArraysAndStrings
     {
         public int ShortestPathBinaryMatrix(int[][] grid)
         {
-            int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
-            int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
+            int[] dx = { -1, -1, -1, 0, 0, 1, 1, 1 };
+            int[] dy = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
             if (grid[0][0] == 1) return -1;
 

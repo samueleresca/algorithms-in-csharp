@@ -12,7 +12,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
         [InlineData("qwertyuiopasdfghjklzxcvbnm", true)]
         public static void should_detect_unique_strings(string s, bool result)
         {
-            StringIsUnique.Check(s).ShouldBe(result);
+            StringIsUnique.Execute(s).ShouldBe(result);
         }
     }
 }

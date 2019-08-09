@@ -7,9 +7,9 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
         public static int calculateSteps(int[] nums)
         {
             int reachable = 0, lastReachable = 0, steps = 0;
-		
-            for (int i = 0; i < nums.Length - 1; i++) {
-                
+
+            for (var i = 0; i < nums.Length - 1; i++)
+            {
                 reachable = Math.Max(reachable, i + nums[i]);
 
                 if (i != lastReachable) continue;
@@ -17,6 +17,7 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
                 lastReachable = reachable;
                 if (reachable >= nums.Length - 1) break;
             }
+
             return steps;
         }
     }

@@ -1,11 +1,7 @@
-using System.Collections.Concurrent;
-using Xunit.Sdk;
-
 namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public static class SortedColors
     {
-
         public static void GetSortedColors(int[] nums)
         {
             QuickSort(nums, 0, nums.Length - 1);
@@ -15,32 +11,24 @@ namespace HandsOn.Algorithms.ArraysAndStrings
         {
             if (leftIndex >= rightIndex) return;
 
-            int pivot = Partition(arr, leftIndex, rightIndex);
+            var pivot = Partition(arr, leftIndex, rightIndex);
 
-            if (pivot > 1)
-            {
-                QuickSort(arr, leftIndex, pivot - 1);
-            }
-            if (pivot + 1 < rightIndex)
-            {
-                QuickSort(arr, pivot + 1, rightIndex);
-            }
-
+            if (pivot > 1) QuickSort(arr, leftIndex, pivot - 1);
+            if (pivot + 1 < rightIndex) QuickSort(arr, pivot + 1, rightIndex);
         }
 
         private static int Partition(int[] arr, int left, int right)
         {
-            int pivot = arr[left];
+            var pivot = arr[left];
             while (true)
             {
-
                 while (arr[left] < pivot) left++;
                 while (arr[right] > pivot) right--;
 
 
                 if (left < right)
                 {
-                    int temp = arr[left];
+                    var temp = arr[left];
                     arr[left] = arr[right];
                     arr[right] = temp;
 

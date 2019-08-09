@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace HandsOn.Algorithm.DynamicProgrammingRecursion
@@ -9,7 +8,7 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
         // "ana"
         // Returns the longest repeating non-overlapping  
         // substring in str  
-        public static String longestRepeatedSubstring(String str)
+        public static string longestRepeatedSubstring(string str)
         {
             var checkWords = new Dictionary<string, int>();
             var j = 2;
@@ -17,16 +16,13 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 
             while (j < str.Length)
             {
-                for (int i = 0; i < str.Length - (j - 1); i++)
-                {
+                for (var i = 0; i < str.Length - (j - 1); i++)
                     if (!checkWords.TryAdd(str.Substring(i, j), i))
-                    {
                         lastWord = str.Substring(i, j);
-                    }
-                }
 
                 j++;
             }
+
             return lastWord;
         }
     }

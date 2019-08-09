@@ -23,9 +23,6 @@ The . character does not represent a decimal point and is used to separate numbe
 The time complexity is `O(n)`
 _________________
 
-## Find max number of squares
-
-
 
 _________________
 

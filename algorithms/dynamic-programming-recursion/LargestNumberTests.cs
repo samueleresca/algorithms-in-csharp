@@ -5,7 +5,6 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public class LargestNumberTests
     {
-
         [Fact]
         public void should_calc_the_right_number()
         {

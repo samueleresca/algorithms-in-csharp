@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using Xunit;
 
 namespace HandsOn.Algorithm.TreesGraphs
 {
@@ -31,17 +29,13 @@ namespace HandsOn.Algorithm.TreesGraphs
             PostOrderTraversal(node.Left);
             PostOrderTraversal(node.Right);
             var getValue = node.Value;
-
         }
 
         public IList<int> PostorderTraversal(TreeNode root)
         {
             var myList = new List<int>();
 
-            if (root == null)
-            {
-                return myList;
-            }
+            if (root == null) return myList;
 
             PostOrderHandler(root, myList);
             return myList;
@@ -49,17 +43,13 @@ namespace HandsOn.Algorithm.TreesGraphs
 
         private void PostOrderHandler(TreeNode root, List<int> myList)
         {
-            if (root == null)
-            {
-                return;
-            }
-            
+            if (root == null) return;
+
             PostOrderHandler(root.left, myList);
             PostOrderHandler(root.right, myList);
-            
+
             myList.Add(root.val);
         }
-
 
 
         public class Tree
@@ -69,9 +59,9 @@ namespace HandsOn.Algorithm.TreesGraphs
 
         public class Node<T>
         {
-            public T Value;
             public Node<T> Left;
             public Node<T> Right;
+            public T Value;
         }
     }
 }

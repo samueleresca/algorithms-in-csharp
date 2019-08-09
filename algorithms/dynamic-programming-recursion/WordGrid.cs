@@ -8,10 +8,10 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             var columnLength = board[0].Length;
 
             for (var rowIndex = 0; rowIndex < rowLength; rowIndex++)
-            for (var columnIndex = 0; columnIndex < columnLength; columnIndex++)
-                if (board[rowIndex][columnIndex] == word[0]
-                    && dfs(board, rowIndex, columnIndex, 0, word))
-                    return true;
+                for (var columnIndex = 0; columnIndex < columnLength; columnIndex++)
+                    if (board[rowIndex][columnIndex] == word[0]
+                        && dfs(board, rowIndex, columnIndex, 0, word))
+                        return true;
 
             return false;
         }

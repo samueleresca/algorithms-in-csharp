@@ -1,13 +1,11 @@
-using System;
 using System.Collections.Generic;
-using System.IO;
 
 namespace HandsOn.Algorithms.ArraysAndStrings
 {
-    class Solution
+    internal class Solution
     {
         // Complete the sockMerchant function below.
-        static int sockMerchant(int n, int[] ar)
+        private static int sockMerchant(int n, int[] ar)
         {
             if (n == 0) return 0;
 

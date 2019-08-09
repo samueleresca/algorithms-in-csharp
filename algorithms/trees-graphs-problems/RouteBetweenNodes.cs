@@ -1,22 +1,24 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace HandsOn.Algorithm.TreesGraphs
 {
     public class RouteBetweenNodes
     {
-        static bool IsConnected(Graph g, Node start, Node end)
+        public enum State
+        {
+            Unvisited,
+            Visited,
+            Visiting
+        }
+
+        private static bool IsConnected(Graph g, Node start, Node end)
         {
             if (start == end) return true;
 
             var q = new Queue<Node>();
 
             // Set all to State.Unvisited
-            foreach (var node in g.getNodes())
-            {
-                node.State = State.Unvisited;
-            }
+            foreach (var node in g.getNodes()) node.State = State.Unvisited;
 
             start.State = State.Visiting;
 
@@ -30,10 +32,7 @@ namespace HandsOn.Algorithm.TreesGraphs
                 foreach (var v in u.Childrens)
                 {
                     if (v.State != State.Unvisited) continue;
-                    if (v == end)
-                    {
-                        return true;
-                    }
+                    if (v == end) return true;
 
                     v.State = State.Visiting;
                     q.Enqueue(v);
@@ -57,16 +56,9 @@ namespace HandsOn.Algorithm.TreesGraphs
 
         public class Node
         {
-            public String Name;
             public Node[] Childrens;
+            public string Name;
             public State State;
-        }
-
-        public enum State
-        {
-            Unvisited,
-            Visited,
-            Visiting
         }
     }
 }

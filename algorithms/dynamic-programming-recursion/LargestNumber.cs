@@ -15,16 +15,14 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 
             return finalResult.All(x => x == '0') ? "0" : finalResult;
         }
-
-
     }
 
-    class CustomStringComparer : IComparer<string>
+    internal class CustomStringComparer : IComparer<string>
     {
         public int Compare(string string1, string string2)
         {
-            String order1 = string1 + string2;
-            String order2 = string2 + string1;
+            var order1 = string1 + string2;
+            var order2 = string2 + string1;
             return double.Parse(order2).CompareTo(double.Parse(order1));
         }
     }

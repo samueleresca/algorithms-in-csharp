@@ -15,11 +15,10 @@ namespace HandsOn.Algorithms.ArraysAndStrings
 
             MergeTwoSortedArrays.Merge(array1, m, array2, n);
 
-            array1.ShouldBe(new int[]
-        {
-                1,2,2,3,5,6
-        });
-
+            array1.ShouldBe(new[]
+            {
+                1, 2, 2, 3, 5, 6
+            });
         }
     }
 }

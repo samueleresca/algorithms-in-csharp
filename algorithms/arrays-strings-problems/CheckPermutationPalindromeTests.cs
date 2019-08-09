@@ -9,7 +9,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
         [InlineData("tact coa", true)]
         public void should_detect_permutations_of_strings(string input, bool result)
         {
-            CheckPermutationPalindrome.IsPermutationPalindrome(input).ShouldBe(result);
+            CheckPermutationPalindrome.Execute(input).ShouldBe(result);
         }
     }
 }

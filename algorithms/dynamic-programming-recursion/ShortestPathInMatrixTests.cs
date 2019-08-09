@@ -10,8 +10,8 @@ namespace HandsOn.Algorithms.ArraysAndStrings
         {
             var board = new int[2][];
 
-            board[0] = new[] {0, 1};
-            board[1] = new[] {1, 0};
+            board[0] = new[] { 0, 1 };
+            board[1] = new[] { 1, 0 };
 
             new ShortestPathInMatrix().ShortestPathBinaryMatrix(board).ShouldBe(2);
         }
@@ -21,9 +21,9 @@ namespace HandsOn.Algorithms.ArraysAndStrings
         {
             var board = new int[3][];
 
-            board[0] = new[] {0, 0, 0};
-            board[1] = new[] {1, 1, 0};
-            board[2] = new[] {1, 1, 0};
+            board[0] = new[] { 0, 0, 0 };
+            board[1] = new[] { 1, 1, 0 };
+            board[2] = new[] { 1, 1, 0 };
 
             new ShortestPathInMatrix().ShortestPathBinaryMatrix(board).ShouldBe(4);
         }

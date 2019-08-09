@@ -17,7 +17,6 @@ namespace HandsOn.Algorithms.ArraysAndStrings
                     indexGrouped[charCount].Add(str);
                     indexGrouped[charCount].Sort();
                     continue;
-
                 }
 
                 var newList = new List<string> { str };
@@ -25,10 +24,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             }
 
 
-            foreach (var key in indexGrouped)
-            {
-                result.Insert(0, indexGrouped[key.Key]);
-            }
+            foreach (var key in indexGrouped) result.Insert(0, indexGrouped[key.Key]);
 
             return result;
         }

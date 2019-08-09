@@ -1,21 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace HandsOn.Algorithms.ArraysAndStrings
 {
     public static class CheckPermutationPalindrome
     {
         //O (N)
-        public static bool IsPermutationPalindrome(string input)
+        public static bool Execute(string input)
         {
-            int[] table = BuildCharFrequencyTable(input);
+            var table = BuildCharFrequencyTable(input);
             return CheckMaxOneOdd(table);
         }
 
         private static bool CheckMaxOneOdd(int[] table)
         {
-            bool foundOdd = false;
+            var foundOdd = false;
             foreach (var count in table)
             {
                 if (count % 2 != 1) continue;
@@ -32,11 +28,8 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             var table = new int['z' - 'a' + 1];
             foreach (var c in input.ToCharArray())
             {
-                int x = (int)Char.GetNumericValue(c);
-                if (x != -1)
-                {
-                    table[x]++;
-                }
+                var x = (int)char.GetNumericValue(c);
+                if (x != -1) table[x]++;
             }
 
             return table;

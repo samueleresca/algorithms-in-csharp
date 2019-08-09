@@ -8,7 +8,7 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
         [Fact]
         public static void should_calculate_the_right_longest_common_repeating_substring()
         {
-            string s1 = "banana";
+            var s1 = "banana";
             LongestCommonRepeatingSubstring.longestRepeatedSubstring(s1).ShouldBe("ana");
         }
     }

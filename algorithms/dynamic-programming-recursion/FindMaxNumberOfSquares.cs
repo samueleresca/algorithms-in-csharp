@@ -8,15 +8,11 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
         {
             var sqrtCountHigher = 0;
 
-            for (int i = A; i <= B; i++)
+            for (var i = A; i <= B; i++)
             {
                 var sqrtCount = getSquareCountForSingleNumber(i);
-                
-                if (sqrtCountHigher < sqrtCount)
-                {
-                    sqrtCountHigher = sqrtCount;
-                }
 
+                if (sqrtCountHigher < sqrtCount) sqrtCountHigher = sqrtCount;
             }
 
             return sqrtCountHigher;
@@ -26,10 +22,10 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
         {
             var square = (int)Math.Sqrt(input);
             var isSquare = Math.Pow(square, 2) == input;
-            
+
             if (!isSquare) return squareCount;
             squareCount++;
-            
+
             return getSquareCountForSingleNumber(square, squareCount);
         }
     }

@@ -6,7 +6,6 @@ namespace HandsOn.Algorithms.LinkedLists
 {
     public class DeleteDuplicatesFromListTests
     {
-
         [Fact]
         public void should_remove_duplicates_from_list()
         {
@@ -22,6 +21,5 @@ namespace HandsOn.Algorithms.LinkedLists
             var result = DeleteDuplicatesFromList.DeleteDuplicates(myList);
             result.Count.ShouldBe(4);
         }
-
     }
 }

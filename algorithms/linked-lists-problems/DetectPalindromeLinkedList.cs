@@ -1,14 +1,11 @@
-using System.Collections.Generic;
-
 namespace HandsOn.Algorithms.LinkedLists
 {
     public class DetectPalindromeLinkedList
     {
-
         public static bool IsPalindrome(MyLinkedListNode<int> head)
         {
             var result = cloneAndReverse(head);
-            return isEqual<int>(result, head);
+            return isEqual(result, head);
         }
 
 
@@ -29,10 +26,7 @@ namespace HandsOn.Algorithms.LinkedLists
         {
             while (n1 != null && n2 != null)
             {
-                if (!n1.Value.Equals(n2.Value))
-                {
-                    return false;
-                }
+                if (!n1.Value.Equals(n2.Value)) return false;
 
                 n1 = n1.Next;
                 n2 = n2.Next;
@@ -45,7 +39,7 @@ namespace HandsOn.Algorithms.LinkedLists
 
     public class MyLinkedListNode<T>
     {
-        public T Value;
         public MyLinkedListNode<T> Next;
+        public T Value;
     }
 }

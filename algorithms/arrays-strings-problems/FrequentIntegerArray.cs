@@ -5,12 +5,11 @@ namespace HandsOn.Algorithm.DynamicProgrammingRecursion
 {
     public static class FrequentIntegerArray
     {
-
         public static IList<int> TopKFrequent(int[] nums, int k)
         {
             var dictionary = new Dictionary<int, int>();
 
-            for (int i = 0; i < nums.Length; i++)
+            for (var i = 0; i < nums.Length; i++)
             {
                 if (dictionary.ContainsKey(nums[i]))
                 {

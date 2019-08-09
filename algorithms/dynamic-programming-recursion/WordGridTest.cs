@@ -14,9 +14,9 @@ namespace HandsOn.Algorithms.ArraysAndStrings
             var board = new char[3][];
 
 
-            board[0] = new[] {'A', 'B', 'C', 'E'};
-            board[1] = new[] {'S', 'F', 'C', 'S'};
-            board[2] = new[] {'A', 'D', 'E', 'E'};
+            board[0] = new[] { 'A', 'B', 'C', 'E' };
+            board[1] = new[] { 'S', 'F', 'C', 'S' };
+            board[2] = new[] { 'A', 'D', 'E', 'E' };
 
             new WordGrid().Exist(board, word).ShouldBe(result);
         }

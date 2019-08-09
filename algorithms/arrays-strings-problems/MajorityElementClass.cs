@@ -16,6 +16,7 @@ namespace HandsOn.Algorithms.ArraysAndStrings
                     hashTable[t] = hashTable[t] + 1;
                     continue;
                 }
+
                 hashTable.Add(t, 1);
             }
 
