@@ -14,7 +14,6 @@ namespace HandsOn.Algorithm.TreesGraphs
                 if (!child.Visited)
                     DepthFirstSearch(child);
         }
-
         private static void BreadthFirstSearch(Node root)
         {
             var queue = new Queue<Node>();
@@ -33,18 +32,6 @@ namespace HandsOn.Algorithm.TreesGraphs
                     queue.Enqueue(n);
                 }
             }
-        }
-
-        private class Graph
-        {
-            public Node[] nodes;
-        }
-
-        private class Node
-        {
-            public Node[] Childrens;
-            public string Name;
-            public bool Visited;
         }
     }
 }

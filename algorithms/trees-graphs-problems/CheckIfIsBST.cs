@@ -5,22 +5,10 @@ namespace HandsOn.Algorithm.TreesGraphs
 
     /* Class containing left and right child of current 
     node and key value*/
-    public class Node
-    {
-        public int data;
-        public Node left, right;
-
-        public Node(int item)
-        {
-            data = item;
-            left = right = null;
-        }
-    }
-
     public class BinaryTree
     {
         //Root of the Binary Tree 
-        public Node root;
+        public TreeNode root;
 
         /* can give min and max value according to your code or 
         can write a function to find min and max value of tree. */
@@ -31,33 +19,18 @@ namespace HandsOn.Algorithm.TreesGraphs
 
         /* Returns true if the given tree is a BST and its 
         values are >= min and <= max. */
-        public virtual bool isBSTUtil(Node node, int min, int max)
+        public virtual bool isBSTUtil(TreeNode node, int min, int max)
         {
             /* an empty tree is BST */
             if (node == null) return true;
 
             /* false if this node violates the min/max constraints */
-            if (node.data < min || node.data > max) return false;
+            if (node.val < min || node.val > max) return false;
 
             /* otherwise check the subtrees recursively 
             tightening the min/max constraints */
             // Allow only distinct values 
-            return isBSTUtil(node.left, min, node.data - 1) && isBSTUtil(node.right, node.data + 1, max);
-        }
-    }
-
-    // This code is contributed by Shrikant13 
-
-
-    public class TreeNode
-    {
-        public TreeNode left;
-        public TreeNode right;
-        public int val;
-
-        public TreeNode(int x)
-        {
-            val = x;
+            return isBSTUtil(node.left, min, node.val - 1) && isBSTUtil(node.right, node.val + 1, max);
         }
     }
 
