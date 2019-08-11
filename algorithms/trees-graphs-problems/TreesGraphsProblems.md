@@ -86,7 +86,6 @@ The time complexity is `O(n)`
 
 _________________
 
-
 ## Minimal tree 
 
 Files: [MinimalTree.cs](./MinimalTree.cs),
@@ -115,6 +114,46 @@ Result: 10, 20, 30
 ### Time complexity 
 
 The time complexity is `O(n log n)`
+
+______________________
+
+## Binary Tree Level Order Traversal
+
+Files: [ListOfDepths.cs](./ListOfDepths.cs),
+[ListOfDepthsTests.cs](./ListOfDepthsTests.cs)
+Description: Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+
+
+```
+   3
+   / \
+  9  20
+    /  \
+   15   7
+
+Result: [
+          [3],
+          [9,20],
+          [15,7]
+        ]
+```
+
+### Steps
+
+1. Start declaring a level list of type `List<IList<int>>`
+2. Define a recursive method that follows the In-Order traversal pattern
+    1. If node is null `return`
+    2. If the list.Count is equals to the level initialize a new list
+    3. If list of level is equals to null add a new list with the node value
+    4. otherwise add the node value to the corresponding level
+    5. increment the level
+    6. Call the recursive method for the node.left
+    7. Call the recursive method for the node.right
+3. Return the complete list 
+
+### Time complexity 
+
+The time complexity is `O(n)`
 
 ______________________
 
